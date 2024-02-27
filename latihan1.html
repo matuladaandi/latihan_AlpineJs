@@ -76,18 +76,19 @@
     </div> -->
 
     <div x-data="{pesan : 'Hello Word'}" @log="alert('data terkirim! '+ $event.detail.nama)" class=" container mx-auto w-2/3 text-center mt-10 bg-red-200 p-10 rounded-xl
-        shadow">
+    shadow">
 
-        <label for="nama"
-            class="text-sm font-medium text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">Input
-            Name</label>
+        <form action="/post" @submit.prevent="alert('data success')">
+            <label for="nama"
+                class="text-sm font-medium text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">Input
+            </label>
 
-        <input type="text" @keyup.enter="alert('data terkirim')"
-            class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+            <input type="text" @keyup.enter="alert('data terkirim')"
+                class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
 
-        <button @click="$dispatch('log', { nama: 'matuladax' })" class="py-2 px-5  text-white rounded-md bg-slate-500 mt-3">
-            Click</button>
-
+            <button type="submit" class="py-2 px-5  text-white rounded-md bg-slate-500 mt-3">
+                Kirim!</button>
+        </form>
     </div>
 </body>
 
