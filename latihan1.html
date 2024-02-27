@@ -67,8 +67,24 @@
         <template x-if="open">
             <div class="w-3/4 mx-auto mt-4 p-5 bg-blue-400 rounded text-white">Lorem ipsum dolor sit amet</div>
         </template> -->
-
     </div>
+
+    <!-- <div class="container mx-auto w-2/3 text-center mt-10 bg-red-200 p-10 rounded-xl shadow"
+        x-data="{pesan : 'Hello Word'}">
+        <button @click="window.alert(pesan)" class="py-2 px-5  text-white rounded-md bg-blue-400">
+            Click Me!</button>
+    </div> -->
+
+    <div class="container mx-auto w-2/3 text-center mt-10 bg-red-200 p-10 rounded-xl shadow"
+        x-data="{pesan : 'Hello Word'}">
+        <button @click="ubahWarna" id="tmblPesan" data-pesan="Helloow gays" class="py-2 px-5  text-white rounded-md bg-blue-400">
+            Click Me!</button>
+    </div>
+    <script>
+        function ubahWarna(e) {
+            e.target.classList.add('bg-red-500');
+        }
+    </script>
 </body>
 
 </html>
